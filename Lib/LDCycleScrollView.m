@@ -113,6 +113,9 @@ NSString * const ID = @"LDCycleCollectionViewCell";
     [self addTimer];
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self removeTimer];
+}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     switch (self.direction) {
